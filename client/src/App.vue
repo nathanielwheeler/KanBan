@@ -1,49 +1,30 @@
-<template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/boards">
-        <button class="btn btn-info bg">Boards</button>
-      </router-link>
-      <button class="btn btn-danger bg" @click="logout()">Logout</button>
-    </div>
-    <router-view />
-  </div>
-</template>
-
 <script>
+import NavHeader from "./components/NavHeader.vue"
 export default {
-  name: "App",
-  methods: {
-    logout() {
-      this.$store.dispatch("logout");
-    }
-  }
-};
+	name: 'app',
+	components: { NavHeader },
+	
+	props: [],
+	
+	data() {
+		return {};
+	},
+	computed: {},
+	methods: {
+
+	}
+}
 </script>
 
-<style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<template>
+	<div class='app'>
+		<nav-header />
+		<main>
+			<router-view />
+		</main>
+	</div>
+</template>
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-
-.btn {
-  padding: 5px;
-}
+<style scoped>
+	
 </style>

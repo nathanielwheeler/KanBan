@@ -1,10 +1,14 @@
-*{
-  color: white;
-  text-shadow: 0px 2px 1px black,0px -2px 1px black,2px 0px  1px black, -2px 0px 1px black;
-font-family: 'Press Start 2P', cursive;
+* {
+	color: #928374;
+	background: #282828;
+	font-family: 'hack', monospace;
 }
 
-.bg{
-    background-image: url(https://media0.giphy.com/media/ZrlFjwhclknWE/source.gif);
-  background-size: cover;
+/* #region Bootstrap Tweaks */
+
+/* Makes bootstrap corners square */
+.btn, .card {
+	border-radius: 0;
 }
+
+/* #endregion */
